@@ -1,0 +1,32 @@
+/* ═══════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Edit this file to change the entire look of the site.
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* Colors */
+  --color-ink:     #1a1f2e;   /* dark navy  — body text, dark bg */
+  --color-sea:     #1e3a5f;   /* deep navy  — headings, dark sections */
+  --color-horizon: #4a7fa5;   /* mid blue   — italic accents */
+  --color-foam:    #f0ede6;   /* warm cream — alternate section bg */
+  --color-salt:    #d9d4c9;   /* light gray — borders, dividers */
+  --color-sun:     #c8934a;   /* amber gold — labels, highlights */
+  --color-light:   #f8f5ef;   /* near white — default page bg */
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono:  'DM Mono', 'Courier New', monospace;
+  --font-body:  'Newsreader', Georgia, serif;
+
+  /* Layout */
+  --section-y:  7rem;
+  --section-x:  3rem;
+  --max-width:  1100px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-y: 4.5rem;
+    --section-x: 1.5rem;
+  }
+}

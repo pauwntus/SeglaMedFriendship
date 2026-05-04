@@ -1,0 +1,73 @@
+---
+import { prep } from '../../data/content';
+---
+
+<section id="infor">
+  <div class="inner">
+    <div class="section-label reveal">{prep.label}</div>
+    <h2 class="section-title reveal" set:html={prep.title} />
+    <div class="grid">
+      {
+        prep.checklists.map((list) => (
+          <div class="card reveal">
+            <div class="card-title">{list.title}</div>
+            <ul class="list">
+              {list.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  .card {
+    border: 1px solid var(--color-salt);
+    padding: 2rem;
+  }
+
+  .card-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-sea);
+    margin-bottom: 1.2rem;
+  }
+
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .list li {
+    font-size: 0.88rem;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-left: 1.8rem;
+    position: relative;
+  }
+
+  .list li::before {
+    content: '○';
+    position: absolute;
+    left: 0;
+    color: var(--color-horizon);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    top: 0.05rem;
+  }
+
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
