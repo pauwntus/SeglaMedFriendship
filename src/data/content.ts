@@ -29,8 +29,8 @@ export const about = {
   label: '01 — Om båten',
   title: 'En klassiker<br>på <em>Stockholms vatten</em>',
   paragraphs: [
-    'Friendship är en Albin Viggen — en av Sveriges mest omtyckta kölbåtar. Med sina stabila egenskaper och lätthanterliga rigg är hon perfekt för seglarkvällar och helgäventyr i skärgården.',
-    'Båten ligger vid Svindersviks Båtklubb i Nacka, strax söder om Stockholm. Härifrån når du Baggensfjärden och skärgårdens gömda vikar på kort tid.',
+    'Friendship är en Albin Viggen från 1972 — stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når du Baggensfjärden och skärgårdens gömda vikar på en timme.',
+    'Varje tur är lite annorlunda. Ibland lägger sig vinden. Ibland trasslar tampen in sig i motorn. Men det är inte det man minns — det är solnedgången i Norrviken, bastun på Härsö, och att äntligen få säga "skepp ohoj!" igen efter en lång höst.',
   ],
   specs: [
     { label: 'Typ',        value: 'Albin Viggen' },
@@ -44,8 +44,8 @@ export const about = {
 
 export const gallery = {
   label: '02 — Bilder',
-  title: 'Livet<br><em>ombord</em>',
-  intro: 'Lägg till era egna bilder — under förberedelser, segling och i hamn.',
+  title: 'Äventyr<br><em>ombord</em>',
+  intro: 'Svindersvik, Härsö, Björnö, Arholma — och platser vi inte hittade på kartan men minns för alltid.',
   hint:  'Ersätt platshållarna med era egna bilder',
   items: [
     { label: 'Friendship\ni hamn' },
@@ -59,7 +59,7 @@ export const gallery = {
 export const packing = {
   label: '03 — Packlista',
   title: 'Vad tar du<br><em>med dig?</em>',
-  tip:   'Packa lätt och i mjuka väskor — de går att trycka in i bagutrymmen. Hårda resväskor är opraktiska ombord. Allt på däck behöver tåla att bli vått.',
+  tip:   'Packa lätt och i mjuka väskor — de går att trycka in i bagutrymmena. Hårda resväskor är opraktiska ombord. Allt på däck behöver tåla att bli vått.',
   cards: [
     {
       icon:   '🧥',
@@ -98,13 +98,13 @@ export const packing = {
       items: [
         { text: 'Varje person tar med ett snacks' },
         { text: 'Det ska vara oväntat', important: true },
-        { text: 'Ingen berättar vad det är' },
-        { text: 'Avslöjas ombord' },
+        { text: 'Ingen berättar vad det är förrän ombord' },
+        { text: 'Traditionen får inte brytas' },
       ],
       tradition: {
-        label:  'Årets förslag',
-        value:  'Halloumi-chips med citron & za\'atar',
-        footer: '… eller nåt som ingen sett komma.',
+        label:  'Ur historien',
+        value:  'Salmia & cidervinägerchips · Halloumichips · Cidervinäger surprise',
+        footer: 'Laget runt. Ingen vet vad som väntar.',
       },
     },
   ],
@@ -117,12 +117,12 @@ export const prep = {
     {
       title: '✅ Inför avfärd',
       items: [
-        'Fyll på vatten',
+        'Fyll på vatten (det finns inget stopp — ta till när det rinner över)',
         'Fyll bensindunkarna',
         'Fyll bensintanken',
         'Fyll på spritköket',
         'Sätt i bensinslangen (snurran)',
-        'Förbered försegel',
+        'Förbered försegel — kolla att tamparna sitter rätt',
         'Ta fram sjökort',
         'Kolla ankare och linor',
         'Kolla batteri',
@@ -132,12 +132,12 @@ export const prep = {
     {
       title: '👨‍🏫 Säkerhetsgenomgång',
       items: [
-        'Snurran (motorn) — hur den används',
-        'Bommen — var den är och hur den rör sig',
+        'Snurran (motorn) — hur den startas och stoppas',
+        'Bommen — var den är och hur den rör sig utan förvarning',
         'Skota — hur man hanterar den',
         'För- och storsegel — skillnad och funktion',
         'Kryssa och slå',
-        'Gippa — vad det innebär',
+        'Gippa — vad det innebär och varför det ska ropas',
         'Lägga runt knap',
         'Sätta och ta ner segel',
         'Ankra',
@@ -151,14 +151,14 @@ export const rules = {
   label: '05 — Ombord',
   title: 'Att tänka på<br><em>som besättning</em>',
   items: [
-    { num: '01', title: 'Flytväst alltid',       desc: 'Obligatorisk i dåligt väder och mörker. Skippern bestämmer när.' },
-    { num: '02', title: 'Akta bommen',           desc: 'Bommen är i ögonhöjd och rör sig snabbt vid gipp. Håll koll alltid.' },
-    { num: '03', title: 'Tre kontaktpunkter',    desc: 'En hand för dig, en för båten. Rusa aldrig på ett gungande däck.' },
-    { num: '04', title: 'Skippern bestämmer',    desc: 'Ombord gäller skipperns ord — inte av hierarki, utan för säkerhetens skull.' },
-    { num: '05', title: 'Inget glas',            desc: 'Glasflaskor och dricksglas är förbjudet på däck. Plastmuggar alltid.' },
-    { num: '06', title: 'Sjösjuka händer',       desc: 'Ta tabletter INNAN avfärd. Säg till tidigt. Horisontblick och frisk luft hjälper.' },
-    { num: '07', title: 'Sopor & miljö',         desc: 'Absolut inget skräp i havet. Allt avfall tas tillbaka till land.' },
-    { num: '08', title: 'Hjälps åt',             desc: 'Lina, fender, kaffe, disk. En segelbåt fungerar bäst när alla drar sitt strå.' },
+    { num: '01', title: 'Flytväst alltid',       desc: 'Obligatorisk i dåligt väder och mörker. Skippern bestämmer när — inga diskussioner.' },
+    { num: '02', title: 'Akta bommen',           desc: 'Den sitter i ögonhöjd och rör sig snabbt utan förvarning. Den har träffat folk förut.' },
+    { num: '03', title: 'Tre kontaktpunkter',    desc: 'En hand för dig, en för båten. Däcket gungar och är halt — spring aldrig.' },
+    { num: '04', title: 'Skippern bestämmer',    desc: 'Ombord gäller skipperns ord. Inte av hierarki — utan för att det finns en anledning.' },
+    { num: '05', title: 'Inget glas på däck',    desc: 'Glasflaskor och dricksglas stannar i kajutan. Plastmuggar finns ombord.' },
+    { num: '06', title: 'Sjösjuka händer',       desc: 'Ta tabletter i god tid innan avfärd. Säg till tidigt om det börjar gunga — horisontblick och frisk luft på fören hjälper mer än att krypa ner i kajutan.' },
+    { num: '07', title: 'Sopor & miljö',         desc: 'Inget skräp i havet. Allt tar vi tillbaka till land.' },
+    { num: '08', title: 'Alla drar sitt strå',   desc: 'Lina, fender, kaffe, disk. En segelbåt är ett litet samhälle och det märks direkt om någon inte bidrar.' },
   ],
   emergency: {
     phone:  '020-41 03 00',
@@ -171,7 +171,7 @@ export const rules = {
 export const howToFind = {
   label: '06 — Praktiskt',
   title: 'Att hitta<br><em>till båten</em>',
-  intro: 'Kolla med skippern om exakt bryggnummer och mötestid inför varje tur.',
+  intro: 'Kolla med skippern om exakt bryggnummer och mötestid inför varje tur — och kom inte bakfull. (Rookie mistake.)',
   details: [
     { label: 'Klubb',      value: 'Svindersviks Båtklubb' },
     { label: 'Adress',     value: 'Svindersviksvägen, Nacka' },
