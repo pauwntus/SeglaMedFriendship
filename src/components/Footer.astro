@@ -1,5 +1,6 @@
 ---
 import { boat } from '../data/content';
+import pkg from '../../package.json';
 ---
 
 <footer>
@@ -7,7 +8,8 @@ import { boat } from '../data/content';
   <div class="meta">
     S/Y {boat.type}<br />
     {boat.club} · Nacka<br />
-    Stockholm, Sverige
+    Stockholm, Sverige<br />
+    <span class="version">v{pkg.version}</span>
   </div>
 </footer>
 
@@ -36,6 +38,8 @@ import { boat } from '../data/content';
     text-align: right;
     line-height: 2;
   }
+
+  .version { opacity: 0.4; }
 
   @media (max-width: 768px) {
     footer {
