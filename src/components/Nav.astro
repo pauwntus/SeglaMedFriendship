@@ -1,0 +1,129 @@
+---
+import { boat, navLinks } from '../data/content';
+---
+
+<nav id="main-nav">
+  <a href="#" class="brand">{boat.name}</a>
+  <button id="nav-toggle" class="toggle" aria-label="Meny" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="links" id="nav-links">
+    {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+  </div>
+</nav>
+
+<script>
+  const nav    = document.getElementById('main-nav')!;
+  const toggle = document.getElementById('nav-toggle')!;
+  const links  = document.getElementById('nav-links')!;
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  links.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem var(--section-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+
+  nav.scrolled {
+    background: rgba(30, 58, 95, 0.92);
+    backdrop-filter: blur(12px);
+  }
+
+  .brand {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: white;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .links a {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .links a:hover { color: var(--color-sun); }
+
+  /* Hamburger */
+  .toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.4rem;
+    background: none;
+    border: none;
+  }
+
+  .toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .toggle.open span:nth-child(2) { opacity: 0; }
+  .toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+
+    .toggle { display: flex; }
+
+    .links {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: rgba(13, 33, 55, 0.97);
+      backdrop-filter: blur(12px);
+      flex-direction: column;
+      gap: 0;
+      padding: 0.5rem 0;
+    }
+
+    .links.open { display: flex; }
+
+    .links a {
+      padding: 0.85rem 1.5rem;
+      font-size: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+  }
+</style>
