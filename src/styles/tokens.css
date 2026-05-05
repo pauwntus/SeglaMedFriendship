@@ -13,10 +13,9 @@
   --color-sun:     #c8934a;   /* amber gold — labels, highlights */
   --color-light:   #f8f5ef;   /* near white — default page bg */
 
-  /* Typography */
+  /* Typography — two fonts only */
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-mono:  'DM Mono', 'Courier New', monospace;
-  --font-body:  'Newsreader', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
 
   /* Layout */
   --section-y:  7rem;

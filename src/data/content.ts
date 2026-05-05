@@ -27,11 +27,11 @@ export const navLinks = [
 
 export const about = {
   label: '01 — Om båten',
-  title: 'En gammal vän<br>på <em>Stockholms vatten</em>',
+  title: 'En klassiker<br>på <em>Stockholms vatten</em>',
   paragraphs: [
     'Friendship är en Albin Viggen — stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når du Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
-    'Varje sommar, efter en lång höst, vinter och vår, är det äntligen dags igen. Man börjar med att röja och ställa iordning. Frågar om motorn fungerar. Svarar alltid lite osäkert. Packar för mycket mat. Och sätter kurs — "skepp ohoj!" — mot Härsö, Björnö, Arholma, eller vart vinden tar en.',
-    'Saker går ibland snett ombord. Tampen trasslar in sig i motorn. Vinden lägger sig. Ankaret sitter inte ordentligt. Men det är inte det man minns efteråt. Man minns solnedgången i Norrviken, bastun, att räkna stjärnfall på rygg på däck en nattsvart augustikväll.',
+    'Varje sommar, efter en lång höst och vinter, är det äntligen dags igen. Man ställer iordning, packar mat och sätter kurs mot Härsö, Björnö eller vart det bär.',
+    'Det händer saker ombord — det hör till. Men det är inte det man minns efteråt. Man minns solnedgången i Norrviken, bastun på Härsö, att räkna stjärnfall på rygg på däck en nattsvart augustikväll.',
   ],
   specs: [
     { label: 'Typ',        value: 'Albin Viggen' },
@@ -60,10 +60,10 @@ export const gallery = {
 export const packing = {
   label: '03 — Packlista',
   title: 'Vad tar du<br><em>med dig?</em>',
-  tip:   'Packa i mjuka väskor — hårda resväskor ryms inte och är ett dåligt tecken. Allt som hamnar på däck kommer att bli vått. Ta med det du faktiskt behöver, inget mer. Och ett snacks som ingen väntar sig.',
+  tip:   'Packa i mjuka väskor — de ryms i bagutrymmena, hårda resväskor passar inte ombord. Allt på däck behöver tåla att bli vått.',
   cards: [
     {
-      icon:   '🧥',
+      icon:   'clothes',
       title:  'Kläder & skydd',
       snacks: false,
       items: [
@@ -78,7 +78,7 @@ export const packing = {
       ],
     },
     {
-      icon:   '🎒',
+      icon:   'bag',
       title:  'Personligt',
       snacks: false,
       items: [
@@ -93,7 +93,7 @@ export const packing = {
       ],
     },
     {
-      icon:   '🎭',
+      icon:   'star',
       title:  'Det oväntade snackset',
       snacks: true,
       items: [
@@ -116,7 +116,7 @@ export const prep = {
   title: 'Inför<br><em>avfärd</em>',
   checklists: [
     {
-      title: '✅ Inför avfärd',
+      title: 'Inför avfärd',
       items: [
         'Fyll på vatten (det finns inget stopp — ta till när det rinner över)',
         'Fyll bensindunkarna',
@@ -131,7 +131,7 @@ export const prep = {
       ],
     },
     {
-      title: '👨‍🏫 Säkerhetsgenomgång',
+      title: 'Säkerhetsgenomgång',
       items: [
         'Snurran (motorn) — hur den startas och stoppas',
         'Bommen — var den är och hur den rör sig utan förvarning',
@@ -172,7 +172,7 @@ export const rules = {
 export const howToFind = {
   label: '06 — Praktiskt',
   title: 'Att hitta<br><em>till båten</em>',
-  intro: 'Kolla med skippern om bryggnummer och mötestid inför varje tur. Kom gärna lite tidigt — det finns alltid något att ställa iordning. Kom inte bakfull. Det finns dokumenterat i loggboken.',
+  intro: 'Kolla med skippern om bryggnummer och mötestid inför varje tur.',
   details: [
     { label: 'Klubb',      value: 'Svindersviks Båtklubb' },
     { label: 'Adress',     value: 'Svindersviksvägen, Nacka' },
