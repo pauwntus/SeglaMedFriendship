@@ -40,18 +40,19 @@ import { rules } from '../../data/content';
     margin: 3.5rem auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .rule {
-    background: rgba(255, 255, 255, 0.04);
     padding: 2rem 2.5rem;
-    transition: background 0.2s;
   }
 
-  .rule:hover { background: rgba(255, 255, 255, 0.08); }
+  .rule:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .rule:nth-child(n+3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
   .rule-num {
     font-family: var(--font-sans);
