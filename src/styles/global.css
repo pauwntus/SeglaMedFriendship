@@ -48,6 +48,31 @@ section {
   color: var(--color-horizon);
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-sea);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  text-decoration: none;
+  z-index: 200;
+  border-radius: 2px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Focus indicators */
+*:focus-visible {
+  outline: 2px solid var(--color-sun);
+  outline-offset: 3px;
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;

@@ -43,9 +43,9 @@ import { boat } from '../../data/content';
   </div>
 
   <div class="content">
-    <div class="title">
+    <h1 class="title">
       <em>{boat.prefix}</em>{boat.name}
-    </div>
+    </h1>
     <div class="subtitle">
       {boat.type}<br />{boat.club}<br />{boat.area}
     </div>
@@ -157,7 +157,7 @@ import { boat } from '../../data/content';
     align-items: flex-end;
   }
 
-  .title {
+  h1.title {
     font-family: var(--font-serif);
     font-size: clamp(3.5rem, 8vw, 7rem);
     color: white;
@@ -165,7 +165,7 @@ import { boat } from '../../data/content';
     font-weight: 400;
   }
 
-  .title em {
+  h1.title em {
     font-style: italic;
     color: rgba(255, 255, 255, 0.6);
     display: block;
