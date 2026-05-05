@@ -71,7 +71,7 @@ section {
   left: 1rem;
   padding: 0.6rem 1.2rem;
   background: var(--color-sea);
-  color: white;
+  color: var(--color-light);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   text-decoration: none;
