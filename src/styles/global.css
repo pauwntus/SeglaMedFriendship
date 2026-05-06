@@ -60,8 +60,7 @@ section {
 }
 
 .section-title em {
-  font-style: italic;
-  color: var(--color-horizon);
+  font-style: normal;
 }
 
 /* Skip link */
