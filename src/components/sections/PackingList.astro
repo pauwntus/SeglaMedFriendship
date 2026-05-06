@@ -4,7 +4,6 @@ import { packing } from '../../data/content';
 
 <section id="pack">
   <div class="inner">
-    <div class="section-label reveal">{packing.label}</div>
     <h2 class="section-title reveal" set:html={packing.title} />
     <div class="grid">
       {
@@ -65,13 +64,11 @@ import { packing } from '../../data/content';
 
   .card {
     background: var(--color-light);
-    border-top: 3px solid var(--color-sea);
     padding: 2rem;
   }
 
   .card--snacks {
     background: var(--color-sea);
-    border-top-color: var(--color-sun);
     position: relative;
     overflow: hidden;
   }
@@ -173,7 +170,6 @@ import { packing } from '../../data/content';
 
   .tip {
     margin-top: 2rem;
-    border-top: 2px solid var(--color-sun);
     padding: 1.5rem 0 0;
   }
 

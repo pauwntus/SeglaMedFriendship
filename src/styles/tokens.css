@@ -18,7 +18,7 @@
 
   /* Typography — two fonts only */
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans:  'Inter', system-ui, sans-serif;
+  --font-sans:  system-ui, sans-serif;
 
   /* Layout */
   --section-y:  7rem;

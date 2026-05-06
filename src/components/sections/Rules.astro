@@ -4,7 +4,6 @@ import { rules } from '../../data/content';
 
 <section id="regler">
   <div class="inner">
-    <div class="section-label reveal">{rules.label}</div>
     <h2 class="section-title reveal" set:html={rules.title} />
     <div class="grid reveal">
       {
@@ -46,14 +45,6 @@ import { rules } from '../../data/content';
     padding: 2rem 2.5rem;
   }
 
-  .rule:nth-child(odd) {
-    border-right: 1px solid var(--color-border-on-dark);
-  }
-
-  .rule:nth-child(n+3) {
-    border-top: 1px solid var(--color-border-on-dark);
-  }
-
   .rule-num {
     font-family: var(--font-sans);
     font-size: 0.6rem;
@@ -80,7 +71,6 @@ import { rules } from '../../data/content';
     margin-top: 2.5rem;
     padding: 2rem 2.5rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-border-on-dark);
   }
 
   .emergency-label {

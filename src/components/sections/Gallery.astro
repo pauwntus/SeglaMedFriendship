@@ -4,7 +4,6 @@ import { gallery } from '../../data/content';
 
 <section id="bilder">
   <div class="inner">
-    <div class="section-label reveal">{gallery.label}</div>
     <h2 class="section-title reveal" set:html={gallery.title} />
     <p class="intro reveal">{gallery.intro}</p>
     <div class="grid reveal">
@@ -75,11 +74,11 @@ import { gallery } from '../../data/content';
     aspect-ratio: auto;
   }
 
-  .gp-1 { background: linear-gradient(135deg, #1e3a5f, #0d2137); }
-  .gp-2 { background: linear-gradient(135deg, #2d5f8a, #1e3a5f); }
-  .gp-3 { background: linear-gradient(135deg, #1a4060, #2d5f8a); }
-  .gp-4 { background: linear-gradient(135deg, #0d2137, #1e3a5f); }
-  .gp-5 { background: linear-gradient(135deg, #2d5f8a, #4a7fa5); }
+  .gp-1 { background: var(--color-sea); }
+  .gp-2 { background: var(--color-horizon); }
+  .gp-3 { background: var(--color-ink); }
+  .gp-4 { background: var(--color-sea); }
+  .gp-5 { background: var(--color-horizon); }
 
   .placeholder {
     position: absolute;
