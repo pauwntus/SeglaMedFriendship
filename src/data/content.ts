@@ -34,11 +34,13 @@ export const about = {
   ],
   specs: [
     { label: 'Typ',        value: 'Albin Viggen' },
-    { label: 'Längd',      value: '7,6 m' },
-    { label: 'Bredd',      value: '2,5 m' },
-    { label: 'Djupgående', value: '1,2 m' },
-    { label: 'Motor',      value: 'Inombords' },
-    { label: 'Platser',    value: '4–5 pers' },
+    { label: 'Årsmodell',  value: '1975' },
+    { label: 'Längd',      value: '7,1 m' },
+    { label: 'Bredd',      value: '2,24 m' },
+    { label: 'Djupgående', value: '1,06 m' },
+    { label: 'Deplacement',value: '1 400 kg' },
+    { label: 'Motor',      value: 'Utombordare' },
+    { label: 'Platser',    value: '4 pers' },
   ],
 };
 
@@ -127,6 +129,8 @@ export const prep = {
         'Kolla ankare och linor',
         'Kolla batteri',
         'Städa ur kölsvinet',
+        'Röj upp på hyllorna',
+        'Ta onödiga saker till segelvinden',
       ],
     },
     {
@@ -174,8 +178,8 @@ export const howToFind = {
   intro: 'Kolla med skippern om bryggnummer och mötestid inför varje tur.',
   details: [
     { label: 'Klubb',      value: 'Svindersviks Båtklubb' },
-    { label: 'Adress',     value: 'Svindersviksvägen, Nacka' },
-    { label: 'Kollektivt', value: 'Buss 401 från Slussen' },
+    { label: 'Adress',     value: 'Henriksdalsbacken, Nacka' },
+    { label: 'Kollektivt', value: 'Buss 53/55 från Slussen (Henriksdalsberget) eller Sickla tvärbanestation' },
     { label: 'Bil',        value: 'Parkering vid klubben' },
   ],
 };
