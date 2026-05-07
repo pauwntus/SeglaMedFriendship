@@ -19,8 +19,7 @@ export const boat = {
 
 export const navLinks = [
   { label: 'Om båten',      href: '#om' },
-  { label: 'Bilder',        href: '#bilder' },
-  { label: 'Packlista',     href: '#pack' },
+{ label: 'Packlista',     href: '#pack' },
   { label: 'Inför segling', href: '#infor' },
   { label: 'Ombord',        href: '#regler' },
 ];

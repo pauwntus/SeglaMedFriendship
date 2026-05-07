@@ -8,7 +8,7 @@ import { packing } from '../../data/content';
     <div class="grid">
       {
         packing.cards.map((card) => (
-          <div class={`card reveal${card.snacks ? ' card--snacks' : ''}`}>
+          <div class="card reveal">
             <div class="card-icon">
               {card.icon === 'clothes' && (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -53,8 +53,6 @@ import { packing } from '../../data/content';
 </section>
 
 <style>
-  section { background: var(--color-foam); }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -65,23 +63,6 @@ import { packing } from '../../data/content';
   .card {
     background: var(--color-light);
     padding: 2rem;
-  }
-
-  .card--snacks {
-    background: var(--color-sea);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card--snacks::before {
-    content: '★ TRADITION ★';
-    position: absolute;
-    top: 1rem; right: 1rem;
-    font-family: var(--font-sans);
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    color: var(--color-sun);
-    opacity: 0.7;
   }
 
   .card-icon {
@@ -96,16 +77,12 @@ import { packing } from '../../data/content';
     height: 100%;
   }
 
-  .card--snacks .card-icon { color: rgba(255, 255, 255, 0.7); }
-
   .card-title {
     font-family: var(--font-serif);
     font-size: 1.2rem;
     color: var(--color-sea);
     margin-bottom: 1.2rem;
   }
-
-  .card--snacks .card-title { color: white; }
 
   .list {
     list-style: none;
@@ -134,14 +111,10 @@ import { packing } from '../../data/content';
   .list li.important { color: var(--color-sea); font-weight: 400; }
   .list li.important::before { color: var(--color-sun); }
 
-  .card--snacks .list li { color: rgba(255, 255, 255, 0.65); }
-  .card--snacks .list li.important { color: white; }
-  .card--snacks .list li::before { color: rgba(255, 255, 255, 0.2); }
-
   .tradition {
     margin-top: 1.5rem;
     padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--color-salt);
   }
 
   .tradition-label {
@@ -149,23 +122,21 @@ import { packing } from '../../data/content';
     font-size: 0.58rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-sun);
+    color: var(--color-horizon);
     margin-bottom: 0.4rem;
   }
 
   .tradition-value {
     font-family: var(--font-serif);
     font-size: 1.15rem;
-    font-style: italic;
-    color: white;
+    color: var(--color-sea);
   }
 
   .tradition-footer {
     font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.35);
+    color: var(--color-text-subtle);
     margin-top: 0.8rem;
     font-weight: 300;
-    font-style: italic;
   }
 
   .tip {

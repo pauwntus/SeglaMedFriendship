@@ -14,7 +14,6 @@
   --color-light:   #f8f5ef;   /* near white — default page bg */
   --color-text-body:      #3d3a35;   /* warm body text on light bg */
   --color-text-subtle:    #5a5650;   /* secondary text on light bg */
-  --color-border-on-dark: rgba(255, 255, 255, 0.1); /* dividers in dark sections */
 
   /* Typography — two fonts only */
   --font-serif: 'Playfair Display', Georgia, serif;

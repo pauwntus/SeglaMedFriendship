@@ -29,11 +29,6 @@ import { rules } from '../../data/content';
 </section>
 
 <style>
-  section { background: var(--color-sea); }
-
-  /* Dark section overrides */
-  .section-label { color: var(--color-sun); opacity: 0.8; }
-  .section-title { color: white; }
 
   .grid {
     margin: 3.5rem auto 0;
@@ -56,39 +51,38 @@ import { rules } from '../../data/content';
   .rule-title {
     font-family: var(--font-serif);
     font-size: 1.05rem;
-    color: white;
+    color: var(--color-sea);
     margin-bottom: 0.6rem;
   }
 
   .rule-desc {
     font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--color-text-body);
     line-height: 1.6;
     font-weight: 300;
   }
 
   .emergency {
     margin-top: 2.5rem;
-    padding: 2rem 2.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
   }
 
   .emergency-label {
     font-family: var(--font-sans);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
-    color: var(--color-sun);
+    color: var(--color-horizon);
     margin-bottom: 0.7rem;
   }
 
   .emergency-body {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-text-body);
     font-size: 0.92rem;
     line-height: 1.8;
     font-weight: 300;
   }
 
-  .emergency-body strong { color: white; }
+  .emergency-body strong { color: var(--color-sea); }
 
   @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
