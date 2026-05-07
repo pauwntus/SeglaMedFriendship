@@ -19,8 +19,7 @@ export const boat = {
 
 export const navLinks = [
   { label: 'Om båten',      href: '#om' },
-  { label: 'Bilder',        href: '#bilder' },
-  { label: 'Packlista',     href: '#pack' },
+{ label: 'Packlista',     href: '#pack' },
   { label: 'Inför segling', href: '#infor' },
   { label: 'Ombord',        href: '#regler' },
 ];
@@ -29,8 +28,9 @@ export const about = {
   label: '01 — Om båten',
   title: 'En klassiker<br>på <em>Stockholms vatten</em>',
   paragraphs: [
-    'Friendship är en Albin Viggen från 1972 — stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når du Baggensfjärden och skärgårdens gömda vikar på en timme.',
-    'Varje tur är lite annorlunda. Ibland lägger sig vinden. Ibland trasslar tampen in sig i motorn. Men det är inte det man minns — det är solnedgången i Norrviken, bastun på Härsö, och att äntligen få säga "skepp ohoj!" igen efter en lång höst.',
+    'Friendship är en Albin Viggen — stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når du Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
+    'Varje sommar, efter en lång höst och vinter, är det äntligen dags igen. Man ställer iordning, packar mat och sätter kurs mot Härsö, Björnö eller vart det bär.',
+    'Det händer saker ombord — det hör till. Men det är inte det man minns efteråt. Man minns solnedgången i Norrviken, bastun på Härsö, att räkna stjärnfall på rygg på däck en nattsvart augustikväll.',
   ],
   specs: [
     { label: 'Typ',        value: 'Albin Viggen' },
@@ -61,10 +61,10 @@ export const gallery = {
 export const packing = {
   label: '03 — Packlista',
   title: 'Vad tar du<br><em>med dig?</em>',
-  tip:   'Packa lätt och i mjuka väskor — de går att trycka in i bagutrymmena. Hårda resväskor är opraktiska ombord. Allt på däck behöver tåla att bli vått.',
+  tip:   'Packa i mjuka väskor — de ryms i bagutrymmena, hårda resväskor passar inte ombord. Allt på däck behöver tåla att bli vått.',
   cards: [
     {
-      icon:   '🧥',
+      icon:   'clothes',
       title:  'Kläder & skydd',
       snacks: false,
       items: [
@@ -79,7 +79,7 @@ export const packing = {
       ],
     },
     {
-      icon:   '🎒',
+      icon:   'bag',
       title:  'Personligt',
       snacks: false,
       items: [
@@ -94,7 +94,7 @@ export const packing = {
       ],
     },
     {
-      icon:   '🎭',
+      icon:   'star',
       title:  'Det oväntade snackset',
       snacks: true,
       items: [
@@ -117,7 +117,7 @@ export const prep = {
   title: 'Inför<br><em>avfärd</em>',
   checklists: [
     {
-      title: '✅ Inför avfärd',
+      title: 'Inför avfärd',
       items: [
         'Fyll på vatten (det finns inget stopp — ta till när det rinner över)',
         'Fyll bensindunkarna',
@@ -134,7 +134,7 @@ export const prep = {
       ],
     },
     {
-      title: '👨‍🏫 Säkerhetsgenomgång',
+      title: 'Säkerhetsgenomgång',
       items: [
         'Snurran (motorn) — hur den startas och stoppas',
         'Bommen — var den är och hur den rör sig utan förvarning',
@@ -155,14 +155,14 @@ export const rules = {
   label: '05 — Ombord',
   title: 'Att tänka på<br><em>som besättning</em>',
   items: [
-    { num: '01', title: 'Flytväst alltid',       desc: 'Obligatorisk i dåligt väder och mörker. Skippern bestämmer när — inga diskussioner.' },
-    { num: '02', title: 'Akta bommen',           desc: 'Den sitter i ögonhöjd och rör sig snabbt utan förvarning. Den har träffat folk förut.' },
-    { num: '03', title: 'Tre kontaktpunkter',    desc: 'En hand för dig, en för båten. Däcket gungar och är halt — spring aldrig.' },
-    { num: '04', title: 'Skippern bestämmer',    desc: 'Ombord gäller skipperns ord. Inte av hierarki — utan för att det finns en anledning.' },
-    { num: '05', title: 'Inget glas på däck',    desc: 'Glasflaskor och dricksglas stannar i kajutan. Plastmuggar finns ombord.' },
-    { num: '06', title: 'Sjösjuka händer',       desc: 'Ta tabletter i god tid innan avfärd. Säg till tidigt om det börjar gunga — horisontblick och frisk luft på fören hjälper mer än att krypa ner i kajutan.' },
-    { num: '07', title: 'Sopor & miljö',         desc: 'Inget skräp i havet. Allt tar vi tillbaka till land.' },
-    { num: '08', title: 'Alla drar sitt strå',   desc: 'Lina, fender, kaffe, disk. En segelbåt är ett litet samhälle och det märks direkt om någon inte bidrar.' },
+    { num: '01', title: 'Flytväst alltid',    desc: 'Obligatorisk i dåligt väder och mörker. Skippern bestämmer när — det är inte upp för omröstning.' },
+    { num: '02', title: 'Akta bommen',        desc: 'Hänger i ögonhöjd och rör sig snabbt utan förvarning. Ropar någon "gipp" — ducka omedelbart, fråga sen.' },
+    { num: '03', title: 'Håll i dig',         desc: 'En hand för dig, en för båten. Däcket gungar och är halt. Spring aldrig — det slutar alltid dåligt.' },
+    { num: '04', title: 'Skippern bestämmer', desc: 'Demokrati är fint till lands. Ombord gäller skipperns ord, och det finns alltid en anledning.' },
+    { num: '05', title: 'Inget glas på däck', desc: 'Glasflaskor och dricksglas stannar nere i kajutan. Det är inte förhandlingsbart.' },
+    { num: '06', title: 'Sjösjuka',           desc: 'Ta tabletterna i god tid — inte när det redan vaggar. Frisk luft och blicken mot horisonten hjälper mer än att krypa ihop i kajutan.' },
+    { num: '07', title: 'Sopor',              desc: 'Inget skräp i havet. Allt tar vi tillbaka till land.' },
+    { num: '08', title: 'Alla bidrar',        desc: 'Lina, fender, kaffe, disk. Det är en liten båt och man märker direkt om någon inte drar sitt strå.' },
   ],
   emergency: {
     phone:  '020-41 03 00',
@@ -175,7 +175,7 @@ export const rules = {
 export const howToFind = {
   label: '06 — Praktiskt',
   title: 'Att hitta<br><em>till båten</em>',
-  intro: 'Kolla med skippern om exakt bryggnummer och mötestid inför varje tur — och kom inte bakfull. (Rookie mistake.)',
+  intro: 'Kolla med skippern om bryggnummer och mötestid inför varje tur.',
   details: [
     { label: 'Klubb',      value: 'Svindersviks Båtklubb' },
     { label: 'Adress',     value: 'Henriksdalsbacken, Nacka' },

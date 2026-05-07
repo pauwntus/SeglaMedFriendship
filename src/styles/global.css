@@ -7,11 +7,27 @@
 
 html { scroll-behavior: smooth; }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   background: var(--color-light);
   color: var(--color-ink);
   overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 /* Layout */
@@ -26,7 +42,7 @@ section {
 
 /* Shared typography */
 .section-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -44,8 +60,32 @@ section {
 }
 
 .section-title em {
-  font-style: italic;
-  color: var(--color-horizon);
+  font-style: normal;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-sea);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  text-decoration: none;
+  z-index: 200;
+  border-radius: 2px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Focus indicators */
+*:focus-visible {
+  outline: 2px solid var(--color-sun);
+  outline-offset: 3px;
 }
 
 /* Scroll reveal */

@@ -4,79 +4,36 @@ import { boat } from '../../data/content';
 
 <section class="hero">
   <div class="ocean"></div>
-  <div class="stars" id="stars"></div>
-
-  <div class="boat" aria-hidden="true">
-    <svg viewBox="0 0 480 320" fill="none">
-      <path d="M60 210 L420 210 L380 260 L100 260 Z" fill="#1a2e45" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-      <path d="M60 210 L420 210 L400 225 L80 225 Z" fill="#243d59"/>
-      <rect x="80" y="195" width="320" height="18" rx="2" fill="#2d5070"/>
-      <path d="M160 195 L320 195 L310 165 L170 165 Z" fill="#1e3a55" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-      <rect x="185" y="172" width="28" height="15" rx="2" fill="rgba(200,220,255,0.15)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-      <rect x="226" y="172" width="28" height="15" rx="2" fill="rgba(200,220,255,0.15)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-      <rect x="267" y="172" width="28" height="15" rx="2" fill="rgba(200,220,255,0.15)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-      <line x1="240" y1="195" x2="240" y2="20" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"/>
-      <line x1="240" y1="190" x2="350" y2="200" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-      <path d="M240 25 L240 185 L345 195 Z" fill="rgba(240,237,230,0.85)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-      <path d="M240 40 L140 195 L240 195 Z" fill="rgba(240,237,230,0.7)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-      <line x1="240" y1="25" x2="100" y2="195" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-      <line x1="240" y1="25" x2="380" y2="195" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-    </svg>
-  </div>
-
   <div class="waves" aria-hidden="true">
     <div class="wave wave-1">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="rgba(30,58,95,0.8)"/>
       </svg>
     </div>
-    <div class="wave wave-2">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,40 C360,90 720,10 1080,50 C1260,70 1380,30 1440,40 L1440,120 L0,120 Z" fill="rgba(13,33,55,0.9)"/>
-      </svg>
-    </div>
-    <div class="wave wave-3">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,80 C180,30 360,90 720,50 C900,30 1080,80 1440,60 L1440,120 L0,120 Z" fill="rgba(10,25,45,0.95)"/>
-      </svg>
-    </div>
   </div>
 
   <div class="content">
-    <div class="title">
+    <h1 class="title">
       <em>{boat.prefix}</em>{boat.name}
-    </div>
+    </h1>
     <div class="subtitle">
       {boat.type}<br />{boat.club}<br />{boat.area}
     </div>
   </div>
 
-  <div class="scroll-hint" aria-hidden="true">Skrolla</div>
+
 </section>
 
-<script>
-  const starsEl = document.getElementById('stars')!;
-  for (let i = 0; i < 60; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
-    s.style.left = Math.random() * 100 + '%';
-    s.style.top  = Math.random() * 70 + '%';
-    s.style.setProperty('--d',     (2 + Math.random() * 4) + 's');
-    s.style.setProperty('--delay', (-Math.random() * 4) + 's');
-    starsEl.appendChild(s);
-  }
-</script>
 
 <style>
   .hero {
-    height: 100vh;
-    min-height: 600px;
+    height: 50vh;
+    min-height: 320px;
     position: relative;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
     background: var(--color-sea);
-    /* override global section padding */
     padding: 0;
   }
 
@@ -86,46 +43,10 @@ import { boat } from '../../data/content';
     background: linear-gradient(175deg, #0d2137 0%, #1e3a5f 35%, #2d5f8a 65%, #4a7fa5 85%, #6ba3c4 100%);
   }
 
-  .stars {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  :global(.star) {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle var(--d, 3s) ease-in-out infinite var(--delay, 0s);
-    opacity: 0;
-  }
-
-  @keyframes twinkle {
-    0%, 100% { opacity: 0; transform: scale(0.8); }
-    50%       { opacity: 0.8; transform: scale(1.2); }
-  }
-
-  .boat {
-    position: absolute;
-    bottom: 160px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(480px, 80vw);
-    animation: rock 6s ease-in-out infinite;
-    transform-origin: center bottom;
-  }
-
-  @keyframes rock {
-    0%, 100% { transform: translateX(-50%) rotate(-0.8deg) translateY(0); }
-    50%       { transform: translateX(-50%) rotate( 0.8deg) translateY(-6px); }
-  }
-
   .waves {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 220px;
+    height: 80px;
     overflow: hidden;
   }
 
@@ -138,9 +59,7 @@ import { boat } from '../../data/content';
 
   .wave svg { width: 100%; height: 100%; }
 
-  .wave-1 { animation: wave 8s linear infinite;         opacity: 0.6; }
-  .wave-2 { animation: wave 12s linear infinite reverse; opacity: 0.4; bottom: -10px; }
-  .wave-3 { animation: wave 6s linear infinite;          opacity: 0.3; bottom: -20px; }
+  .wave-1 { animation: wave 8s linear infinite; opacity: 0.8; }
 
   @keyframes wave {
     0%   { transform: translateX(0); }
@@ -150,14 +69,14 @@ import { boat } from '../../data/content';
   .content {
     position: relative;
     z-index: 10;
-    padding: 0 var(--section-x) 5rem;
+    padding: 2.5rem var(--section-x);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
 
-  .title {
+  h1.title {
     font-family: var(--font-serif);
     font-size: clamp(3.5rem, 8vw, 7rem);
     color: white;
@@ -165,9 +84,9 @@ import { boat } from '../../data/content';
     font-weight: 400;
   }
 
-  .title em {
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.6);
+  h1.title em {
+    font-style: normal;
+    color: white;
     display: block;
     font-size: 0.45em;
     margin-bottom: 0.3em;
@@ -175,7 +94,7 @@ import { boat } from '../../data/content';
   }
 
   .subtitle {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -185,43 +104,13 @@ import { boat } from '../../data/content';
     line-height: 1.8;
   }
 
-  .scroll-hint {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.4);
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  .scroll-hint::after {
-    content: '';
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50%       { opacity: 0.9; }
-  }
-
   @media (max-width: 768px) {
     .content {
-      padding: 0 1.5rem 4rem;
+      padding: 2rem 1.5rem;
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
     }
     .subtitle { text-align: left; max-width: none; }
-    .boat { width: min(300px, 70vw); bottom: 120px; }
   }
 </style>

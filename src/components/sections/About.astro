@@ -5,7 +5,6 @@ import { about } from '../../data/content';
 <section id="om">
   <div class="inner about-grid">
     <div class="text reveal">
-      <div class="section-label">{about.label}</div>
       <h2 class="section-title" set:html={about.title} />
       {about.paragraphs.map((p) => <p>{p}</p>)}
       <div class="specs">
@@ -17,60 +16,36 @@ import { about } from '../../data/content';
         ))}
       </div>
     </div>
-
-    <div class="visual reveal">
-      <div class="card">
-        <div class="card-bg"></div>
-        <div class="card-waves"></div>
-        <svg viewBox="0 0 300 200" fill="none" aria-hidden="true">
-          <path d="M40 130 L260 130 L240 160 L60 160 Z" fill="rgba(255,255,255,0.15)"/>
-          <rect x="50" y="120" width="200" height="12" rx="1" fill="rgba(255,255,255,0.1)"/>
-          <path d="M100 120 L200 120 L193 100 L107 100 Z" fill="rgba(255,255,255,0.08)"/>
-          <line x1="150" y1="120" x2="150" y2="10" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <path d="M150 15 L150 115 L215 122 Z" fill="rgba(240,237,230,0.5)"/>
-          <path d="M150 30 L87 120 L150 120 Z" fill="rgba(240,237,230,0.4)"/>
-        </svg>
-        <div class="card-text">
-          <div class="card-name">Friendship</div>
-          <div class="card-type">Albin Viggen · Svindersviken</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <style>
   .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
+    max-width: 700px;
   }
 
   .text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #3a3a3a;
+    color: var(--color-text-body);
     margin-bottom: 1.5rem;
     font-weight: 300;
+    max-width: 65ch;
   }
 
   .specs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--color-salt);
-    border: 1px solid var(--color-salt);
+    gap: 2rem 3rem;
     margin-top: 2.5rem;
   }
 
   .spec {
-    background: var(--color-light);
-    padding: 1.2rem 1.5rem;
+    padding: 0;
   }
 
   .spec-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -84,63 +59,4 @@ import { about } from '../../data/content';
     color: var(--color-sea);
   }
 
-  .visual { display: flex; justify-content: center; }
-
-  .card {
-    background: var(--color-sea);
-    border-radius: 2px;
-    padding: 3rem 2.5rem;
-    width: 100%;
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card-bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(160deg, #1e3a5f 0%, #0d2137 100%);
-  }
-
-  .card-waves {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 40%;
-    background: linear-gradient(to top, rgba(74,127,165,0.3), transparent);
-  }
-
-  .card svg {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    opacity: 0.9;
-  }
-
-  .card-text { position: relative; z-index: 2; }
-
-  .card-name {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    color: white;
-    font-style: italic;
-  }
-
-  .card-type {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    margin-top: 0.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .visual { display: none; }
-  }
 </style>

@@ -4,13 +4,30 @@ import { packing } from '../../data/content';
 
 <section id="pack">
   <div class="inner">
-    <div class="section-label reveal">{packing.label}</div>
     <h2 class="section-title reveal" set:html={packing.title} />
     <div class="grid">
       {
         packing.cards.map((card) => (
-          <div class={`card reveal${card.snacks ? ' card--snacks' : ''}`}>
-            <div class="card-icon">{card.icon}</div>
+          <div class="card reveal">
+            <div class="card-icon">
+              {card.icon === 'clothes' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+                </svg>
+              )}
+              {card.icon === 'bag' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+              )}
+              {card.icon === 'star' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              )}
+            </div>
             <div class="card-title">{card.title}</div>
             <ul class="list">
               {card.items.map((item) => (
@@ -36,8 +53,6 @@ import { packing } from '../../data/content';
 </section>
 
 <style>
-  section { background: var(--color-foam); }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,32 +61,20 @@ import { packing } from '../../data/content';
   }
 
   .card {
-    background: white;
-    border-top: 3px solid var(--color-sea);
+    background: var(--color-light);
     padding: 2rem;
   }
 
-  .card--snacks {
-    background: var(--color-sea);
-    border-top-color: var(--color-sun);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card--snacks::before {
-    content: '★ TRADITION ★';
-    position: absolute;
-    top: 1rem; right: 1rem;
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    color: var(--color-sun);
-    opacity: 0.7;
-  }
-
   .card-icon {
-    font-size: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-sea);
     margin-bottom: 1rem;
+  }
+
+  .card-icon svg {
+    width: 100%;
+    height: 100%;
   }
 
   .card-title {
@@ -80,8 +83,6 @@ import { packing } from '../../data/content';
     color: var(--color-sea);
     margin-bottom: 1.2rem;
   }
-
-  .card--snacks .card-title { color: white; }
 
   .list {
     list-style: none;
@@ -92,7 +93,7 @@ import { packing } from '../../data/content';
 
   .list li {
     font-size: 0.92rem;
-    color: #444;
+    color: var(--color-text-body);
     font-weight: 300;
     line-height: 1.4;
     padding-left: 1.2rem;
@@ -104,55 +105,47 @@ import { packing } from '../../data/content';
     position: absolute;
     left: 0;
     color: var(--color-salt);
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
   }
 
   .list li.important { color: var(--color-sea); font-weight: 400; }
   .list li.important::before { color: var(--color-sun); }
 
-  .card--snacks .list li { color: rgba(255, 255, 255, 0.65); }
-  .card--snacks .list li.important { color: white; }
-  .card--snacks .list li::before { color: rgba(255, 255, 255, 0.2); }
-
   .tradition {
     margin-top: 1.5rem;
     padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--color-salt);
   }
 
   .tradition-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.58rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-sun);
+    color: var(--color-horizon);
     margin-bottom: 0.4rem;
   }
 
   .tradition-value {
     font-family: var(--font-serif);
     font-size: 1.15rem;
-    font-style: italic;
-    color: white;
+    color: var(--color-sea);
   }
 
   .tradition-footer {
     font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.35);
+    color: var(--color-text-subtle);
     margin-top: 0.8rem;
     font-weight: 300;
-    font-style: italic;
   }
 
   .tip {
     margin-top: 2rem;
-    border-left: 3px solid var(--color-sun);
-    padding: 1.5rem 2rem;
-    background: white;
+    padding: 1.5rem 0 0;
   }
 
   .tip-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -162,7 +155,7 @@ import { packing } from '../../data/content';
 
   .tip p {
     font-size: 0.95rem;
-    color: #444;
+    color: var(--color-text-body);
     line-height: 1.7;
     font-weight: 300;
   }

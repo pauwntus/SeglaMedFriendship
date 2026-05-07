@@ -12,11 +12,12 @@
   --color-salt:    #d9d4c9;   /* light gray — borders, dividers */
   --color-sun:     #c8934a;   /* amber gold — labels, highlights */
   --color-light:   #f8f5ef;   /* near white — default page bg */
+  --color-text-body:      #3d3a35;   /* warm body text on light bg */
+  --color-text-subtle:    #5a5650;   /* secondary text on light bg */
 
-  /* Typography */
+  /* Typography — two fonts only */
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-mono:  'DM Mono', 'Courier New', monospace;
-  --font-body:  'Newsreader', Georgia, serif;
+  --font-sans:  system-ui, sans-serif;
 
   /* Layout */
   --section-y:  7rem;

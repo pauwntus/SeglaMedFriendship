@@ -4,7 +4,6 @@ import { howToFind } from '../../data/content';
 
 <section>
   <div class="inner">
-    <div class="section-label reveal">{howToFind.label}</div>
     <h2 class="section-title reveal" set:html={howToFind.title} />
     <p class="intro reveal">{howToFind.intro}</p>
     <div class="details reveal">
@@ -22,7 +21,6 @@ import { howToFind } from '../../data/content';
 
 <style>
   section {
-    background: var(--color-foam);
     text-align: center;
   }
 
@@ -35,7 +33,7 @@ import { howToFind } from '../../data/content';
     max-width: 500px;
     margin: 0 auto 3rem;
     font-size: 1.05rem;
-    color: #555;
+    color: var(--color-text-subtle);
     line-height: 1.7;
     font-weight: 300;
   }
@@ -44,8 +42,7 @@ import { howToFind } from '../../data/content';
     display: inline-flex;
     gap: 3rem;
     padding: 2rem 3rem;
-    border: 1px solid var(--color-salt);
-    background: white;
+    background: var(--color-light);
     text-align: left;
     flex-wrap: wrap;
   }
@@ -57,7 +54,7 @@ import { howToFind } from '../../data/content';
   }
 
   .detail-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
