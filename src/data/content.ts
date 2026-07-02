@@ -48,16 +48,32 @@ export const gallery = {
   label: '02 – Bilder',
   title: 'Äventyr<br><em>ombord</em>',
   intro: 'Svindersvik, Härsö, Björnö, Arholma – och platser vi inte hittade på kartan men minns för alltid.',
-  hint:  'Ersätt platshållarna med era egna bilder',
-  // Lägg bildfiler i src/assets/bilder/ och skriv filnamnet i src-fältet,
-  // t.ex. src: 'hamn.jpg'. Tom src visar platshållaren. Labeln blir alt-text.
-  // Första bilden visas stor (2×2 rutor i rutnätet).
+  // Lägg bildfiler i src/assets/bilder/ och skriv filnamnet i src-fältet.
+  // Labeln blir alt-text. featured: true ger en stor 2×2-ruta i rutnätet.
+  // Tom src visar en platshållare med labeln.
   items: [
-    { label: 'Friendship\ni hamn', src: '' },
-    { label: 'Under segling',      src: '' },
-    { label: 'Cockpit',            src: '' },
-    { label: 'Kajuta',             src: '' },
-    { label: 'Skärgårdsvy',        src: '' },
+    { label: 'Friendship för ankar i naturhamn',   src: 'IMG_1693.jpeg', featured: true },
+    { label: 'Under segling på öppet vatten',      src: 'IMG_3381.jpeg' },
+    { label: 'Rorsman i regnväder',                src: 'IMG_1610.jpeg' },
+    { label: 'Kartläsning i sittbrunnen',          src: 'IMG_0639.jpeg' },
+    { label: 'Skrovet under gång i motljus',       src: 'IMG_3405.jpeg' },
+    { label: 'Glada miner i sittbrunnen',          src: 'IMG_9216.jpeg' },
+    { label: 'Vila ombord',                        src: 'IMG_9056.jpeg' },
+    { label: 'Lunch under segling',                src: 'IMG_9208.jpeg' },
+    { label: 'Kaffe över sjökortet',               src: 'IMG_9186.jpeg' },
+    { label: 'Besättningen',                       src: '000006280016.jpeg', featured: true },
+    { label: 'Frukost i naturhamn',                src: 'IMG_4952.jpeg' },
+    { label: 'Middag ombord',                      src: 'P1210565.jpeg' },
+    { label: 'Grillkväll på klipporna',            src: 'IMG_1076.jpeg' },
+    { label: 'En get på strandbesök',              src: 'IMG_5276.jpeg' },
+    { label: 'Svala på mantåget',                  src: 'IMG_8884.jpeg' },
+    { label: 'Ankrad i viken',                     src: 'IMG_8856.jpeg' },
+    { label: 'Förtöjd vid klipporna',              src: 'R1-02503-0011.jpeg' },
+    { label: 'Kvällsljus vid bryggan',             src: 'IMG_3346.jpeg' },
+    { label: 'Solnedgång över fjärden',            src: 'IMG_1082.jpeg' },
+    { label: 'Sen kväll ombord',                   src: 'P1210593.jpeg' },
+    { label: 'Arbete på fördäck',                  src: 'IMG_3714.jpeg' },
+    { label: 'Sjösättning',                        src: 'IMG_2035.jpeg' },
   ],
 };
 
