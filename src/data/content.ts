@@ -19,7 +19,7 @@ export const boat = {
 
 export const navLinks = [
   { label: 'Om båten',      href: '#om' },
-{ label: 'Packlista',     href: '#pack' },
+  { label: 'Packlista',     href: '#pack' },
   { label: 'Inför segling', href: '#infor' },
   { label: 'Ombord',        href: '#regler' },
 ];
@@ -37,7 +37,7 @@ export const about = {
     { label: 'Årsmodell',  value: '1975' },
     { label: 'Längd',      value: '7,1 m' },
     { label: 'Bredd',      value: '2,24 m' },
-    { label: 'Djupgående', value: '1,06 m' },
+    { label: 'Djupgående', value: '1,11 m' },
     { label: 'Deplacement',value: '1 400 kg' },
     { label: 'Motor',      value: 'Utombordare' },
     { label: 'Platser',    value: '4 pers' },
@@ -61,7 +61,7 @@ export const gallery = {
 export const packing = {
   label: '03 — Packlista',
   title: 'Vad tar du<br><em>med dig?</em>',
-  tip:   'Packa i mjuka väskor — de ryms i bagutrymmena, hårda resväskor passar inte ombord. Allt på däck behöver tåla att bli vått.',
+  tip:   'Packa i mjuka väskor — de ryms i stuvutrymmena, hårda resväskor passar inte ombord. Allt på däck behöver tåla att bli vått.',
   cards: [
     {
       icon:   'clothes',
@@ -95,18 +95,17 @@ export const packing = {
     },
     {
       icon:   'star',
-      title:  'Det oväntade snackset',
+      title:  'Snacks',
       snacks: true,
       items: [
-        { text: 'Varje person tar med ett snacks' },
-        { text: 'Det ska vara oväntat', important: true },
-        { text: 'Ingen berättar vad det är förrän ombord' },
-        { text: 'Traditionen får inte brytas' },
+        { text: 'Alla tar med varsitt snacks att dela' },
+        { text: 'Gärna något lite oväntat', important: true },
+        { text: 'Avslöjas ombord' },
       ],
       tradition: {
-        label:  'Ur historien',
+        label:  'Tidigare år',
         value:  'Salmia & cidervinägerchips · Halloumichips · Cidervinäger surprise',
-        footer: 'Laget runt. Ingen vet vad som väntar.',
+        footer: 'En liten tradition ombord.',
       },
     },
   ],
@@ -165,8 +164,9 @@ export const rules = {
     { num: '08', title: 'Alla bidrar',        desc: 'Lina, fender, kaffe, disk. Det är en liten båt och man märker direkt om någon inte drar sitt strå.' },
   ],
   emergency: {
-    phone:  '020-41 03 00',
-    vhf:    'VHF kanal 16',
+    phone:  '112 — begär sjöräddning',
+    vhf:    'VHF kanal 16 (anropa Sweden Rescue)',
+    jrcc:   'Sjö- och flygräddningscentralen (JRCC): 010-492 77 00',
     mayday: 'MAYDAY',
     note:   'Skippern visar vid avfärd var nödutrustning (raketer, brandsläckare, livboj) finns.',
   },
