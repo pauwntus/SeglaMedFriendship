@@ -31,7 +31,7 @@ import { packing } from '../../data/content';
             <div class="card-title">{card.title}</div>
             <ul class="list">
               {card.items.map((item) => (
-                <li class={item.important ? 'important' : ''}>{item.text}</li>
+                <li>{item.text}</li>
               ))}
             </ul>
             {card.snacks && card.tradition && (
@@ -101,15 +101,12 @@ import { packing } from '../../data/content';
   }
 
   .list li::before {
-    content: '—';
+    content: '–';
     position: absolute;
     left: 0;
     color: var(--color-salt);
     font-family: var(--font-sans);
   }
-
-  .list li.important { color: var(--color-sea); font-weight: 400; }
-  .list li.important::before { color: var(--color-sun); }
 
   .tradition {
     margin-top: 1.5rem;
