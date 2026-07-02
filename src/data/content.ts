@@ -49,12 +49,15 @@ export const gallery = {
   title: 'Äventyr<br><em>ombord</em>',
   intro: 'Svindersvik, Härsö, Björnö, Arholma – och platser vi inte hittade på kartan men minns för alltid.',
   hint:  'Ersätt platshållarna med era egna bilder',
+  // Lägg bildfiler i src/assets/bilder/ och skriv filnamnet i src-fältet,
+  // t.ex. src: 'hamn.jpg'. Tom src visar platshållaren. Labeln blir alt-text.
+  // Första bilden visas stor (2×2 rutor i rutnätet).
   items: [
-    { label: 'Friendship\ni hamn' },
-    { label: 'Under segling' },
-    { label: 'Cockpit' },
-    { label: 'Kajuta' },
-    { label: 'Skärgårdsvy' },
+    { label: 'Friendship\ni hamn', src: '' },
+    { label: 'Under segling',      src: '' },
+    { label: 'Cockpit',            src: '' },
+    { label: 'Kajuta',             src: '' },
+    { label: 'Skärgårdsvy',        src: '' },
   ],
 };
 
