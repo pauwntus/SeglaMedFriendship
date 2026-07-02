@@ -95,18 +95,17 @@ export const packing = {
     },
     {
       icon:   'star',
-      title:  'Det oväntade snackset',
+      title:  'Snacks',
       snacks: true,
       items: [
-        { text: 'Varje person tar med ett snacks' },
-        { text: 'Det ska vara oväntat', important: true },
-        { text: 'Ingen berättar vad det är förrän ombord' },
-        { text: 'Traditionen får inte brytas' },
+        { text: 'Alla tar med varsitt snacks att dela' },
+        { text: 'Gärna något lite oväntat', important: true },
+        { text: 'Avslöjas ombord' },
       ],
       tradition: {
-        label:  'Ur historien',
+        label:  'Tidigare år',
         value:  'Salmia & cidervinägerchips · Halloumichips · Cidervinäger surprise',
-        footer: 'Laget runt. Ingen vet vad som väntar.',
+        footer: 'En liten tradition ombord.',
       },
     },
   ],
@@ -167,6 +166,7 @@ export const rules = {
   emergency: {
     phone:  '112 — begär sjöräddning',
     vhf:    'VHF kanal 16 (anropa Sweden Rescue)',
+    jrcc:   'Sjö- och flygräddningscentralen (JRCC): 010-492 77 00',
     mayday: 'MAYDAY',
     note:   'Skippern visar vid avfärd var nödutrustning (raketer, brandsläckare, livboj) finns.',
   },

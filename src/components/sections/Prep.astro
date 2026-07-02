@@ -29,12 +29,13 @@ import { prep } from '../../data/content';
   }
 
   .card {
-    padding: 2rem 0;
+    background: var(--color-light);
+    padding: 2rem;
   }
 
   .card-title {
     font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--color-sea);
     margin-bottom: 1.2rem;
   }
@@ -47,22 +48,20 @@ import { prep } from '../../data/content';
   }
 
   .list li {
-    font-size: 0.88rem;
-    color: var(--color-text-subtle);
+    font-size: 0.92rem;
+    color: var(--color-text-body);
     font-weight: 300;
-    line-height: 1.5;
-    padding-left: 1.8rem;
+    line-height: 1.4;
+    padding-left: 1.2rem;
     position: relative;
   }
 
   .list li::before {
-    content: '○';
+    content: '—';
     position: absolute;
     left: 0;
-    color: var(--color-horizon);
+    color: var(--color-salt);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    top: 0.05rem;
   }
 
   @media (max-width: 768px) {
