@@ -45,7 +45,10 @@ const { title = site.title, description = site.description } = Astro.props;
             }
           });
         },
-        { threshold: 0.1 },
+        // Ett threshold relativt elementets höjd triggar aldrig för element som
+        // är högre än skärmen (galleriet på mobil) — utgå från kontakt istället,
+        // med en liten marginal så intoningen startar först en bit in i bild.
+        { threshold: 0, rootMargin: '0px 0px -8% 0px' },
       );
       document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     </script>
