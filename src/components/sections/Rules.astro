@@ -36,10 +36,11 @@ import { rules } from '../../data/content';
     margin: 3.5rem auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
   }
 
   .rule {
-    padding: 2rem 2.5rem;
+    padding: 2rem 0;
   }
 
   .rule-num {
@@ -88,5 +89,6 @@ import { rules } from '../../data/content';
 
   @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
+    .rule { padding: 1.25rem 0; }
   }
 </style>
