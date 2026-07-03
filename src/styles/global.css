@@ -46,7 +46,7 @@ section {
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-sun);
+  color: var(--color-sun-deep);
   margin-bottom: 1.2rem;
 }
 

@@ -5,6 +5,7 @@ import { prep } from '../../data/content';
 <section id="infor">
   <div class="inner">
     <h2 class="section-title reveal" set:html={prep.title} />
+    <p class="intro reveal">{prep.intro}</p>
     <div class="grid">
       {
         prep.checklists.map((list) => (
@@ -21,11 +22,19 @@ import { prep } from '../../data/content';
 </section>
 
 <style>
+  .intro {
+    max-width: 55ch;
+    font-size: 1.05rem;
+    color: var(--color-text-subtle);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
 
   .card {

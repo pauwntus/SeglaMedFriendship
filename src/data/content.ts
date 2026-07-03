@@ -22,6 +22,8 @@ export const navLinks = [
   { label: 'Packlista',     href: '#pack' },
   { label: 'Inför segling', href: '#infor' },
   { label: 'Ombord',        href: '#regler' },
+  { label: 'Hitta hit',     href: '#hitta' },
+  { label: 'Bilder',        href: '#bilder' },
 ];
 
 export const about = {
@@ -132,9 +134,10 @@ export const packing = {
 export const prep = {
   label: '04 – Att tänka på',
   title: 'Inför<br><em>avfärd</em>',
+  intro: 'Det här gör vi tillsammans innan vi lägger ut. Kapten visar och alla hjälps åt, ingen förväntas kunna något i förväg.',
   checklists: [
     {
-      title: 'Inför avfärd',
+      title: 'Vi ställer i ordning',
       items: [
         'Fyll på vatten',
         'Fyll bensindunkarna',
@@ -181,11 +184,15 @@ export const rules = {
     { num: '07', title: 'Alla bidrar',        desc: 'Lina, fender, kaffe, disk. Det är en liten båt och man märker direkt om någon inte drar sitt strå.' },
   ],
   emergency: {
-    phone:  '112 – begär sjöräddning',
-    vhf:    'VHF kanal 16 (anropa Sweden Rescue)',
-    ssrs:   'Sjöräddningssällskapet: 077-579 00 90',
-    mayday: 'MAYDAY',
-    note:   'Kapten visar vid avfärd var nödutrustning (raketer, brandsläckare, livboj) finns.',
+    phone:     '112',
+    phoneHref: 'tel:112',
+    phoneNote: 'begär sjöräddning',
+    vhf:       'VHF kanal 16 (anropa Sweden Rescue)',
+    mayday:    'MAYDAY',
+    ssrsLabel: 'Sjöräddningssällskapet',
+    ssrsPhone: '077-579 00 90',
+    ssrsHref:  'tel:+46775790090',
+    note:      'Kapten visar vid avfärd var nödutrustning (raketer, brandsläckare, livboj) finns.',
   },
 };
 
@@ -195,7 +202,7 @@ export const howToFind = {
   intro: 'Kolla med kapten om bryggnummer och mötestid inför varje tur.',
   details: [
     { label: 'Klubb',      value: 'Svindersviks Båtklubb' },
-    { label: 'Adress',     value: 'Henriksdalsbacken, Nacka' },
+    { label: 'Adress',     value: 'Henriksdalsbacken, Nacka', href: 'https://maps.google.com/?q=Svindersviks+B%C3%A5tklubb,+Nacka' },
     { label: 'Kollektivt', value: 'Buss 53/55 från Slussen (Henriksdalsberget) eller Sickla tvärbanestation' },
     { label: 'Bil',        value: 'Parkering vid klubben' },
   ],
