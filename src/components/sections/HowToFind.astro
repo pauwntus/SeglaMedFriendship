@@ -2,7 +2,7 @@
 import { howToFind } from '../../data/content';
 ---
 
-<section>
+<section id="hitta">
   <div class="inner">
     <h2 class="section-title reveal" set:html={howToFind.title} />
     <p class="intro reveal">{howToFind.intro}</p>
@@ -11,7 +11,13 @@ import { howToFind } from '../../data/content';
         howToFind.details.map((detail) => (
           <div class="detail">
             <div class="detail-label">{detail.label}</div>
-            <div class="detail-value">{detail.value}</div>
+            <div class="detail-value">
+              {'href' in detail && detail.href ? (
+                <a href={detail.href} target="_blank" rel="noopener">{detail.value}</a>
+              ) : (
+                detail.value
+              )}
+            </div>
           </div>
         ))
       }
@@ -48,13 +54,20 @@ import { howToFind } from '../../data/content';
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-horizon);
+    color: var(--color-horizon-text);
   }
 
   .detail-value {
     font-family: var(--font-serif);
     font-size: 1.05rem;
     color: var(--color-sea);
+  }
+
+  .detail-value a {
+    color: var(--color-sea);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-sun);
   }
 
   @media (max-width: 768px) {

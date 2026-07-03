@@ -19,13 +19,14 @@ import { rules } from '../../data/content';
     <div class="emergency reveal">
       <div class="emergency-label">Nödsituation</div>
       <div class="emergency-body">
-        Sjöräddningen: <strong>{rules.emergency.phone}</strong> &nbsp;·&nbsp;
+        Vid nödläge: <a class="emergency-phone" href={rules.emergency.phoneHref}>{rules.emergency.phone}</a>
+        <span class="emergency-hint">({rules.emergency.phoneNote})</span> &nbsp;·&nbsp;
         {rules.emergency.vhf} &nbsp;·&nbsp; Nödrop: <strong>{rules.emergency.mayday}</strong>
-        <br />
-        {rules.emergency.ssrs}
-        <br />
-        {rules.emergency.note}
       </div>
+      <div class="emergency-body">
+        {rules.emergency.ssrsLabel}: <a class="emergency-phone" href={rules.emergency.ssrsHref}>{rules.emergency.ssrsPhone}</a>
+      </div>
+      <div class="emergency-note">{rules.emergency.note}</div>
     </div>
   </div>
 </section>
@@ -47,7 +48,7 @@ import { rules } from '../../data/content';
     font-family: var(--font-sans);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
-    color: var(--color-sun);
+    color: var(--color-sun-deep);
     margin-bottom: 0.7rem;
   }
 
@@ -67,25 +68,45 @@ import { rules } from '../../data/content';
 
   .emergency {
     margin-top: 2.5rem;
-    padding: 2rem 0;
+    padding: 2rem;
+    background: var(--color-sea);
   }
 
   .emergency-label {
     font-family: var(--font-sans);
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: var(--color-horizon);
-    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    color: var(--color-sun-soft);
+    margin-bottom: 0.9rem;
   }
 
   .emergency-body {
-    color: var(--color-text-body);
-    font-size: 0.92rem;
-    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1rem;
+    line-height: 1.9;
     font-weight: 300;
   }
 
-  .emergency-body strong { color: var(--color-sea); }
+  .emergency-body strong { color: white; font-weight: 600; }
+
+  .emergency-phone {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-sun-soft);
+  }
+
+  .emergency-hint { color: rgba(255, 255, 255, 0.75); }
+
+  .emergency-note {
+    margin-top: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
 
   @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
