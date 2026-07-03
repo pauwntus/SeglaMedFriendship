@@ -3,15 +3,6 @@ import { boat } from '../../data/content';
 ---
 
 <section class="hero">
-  <div class="ocean"></div>
-  <div class="waves" aria-hidden="true">
-    <div class="wave wave-1">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="rgba(22,33,29,0.82)"/>
-      </svg>
-    </div>
-  </div>
-
   <div class="content">
     <h1 class="title">
       <em>{boat.prefix}</em>{boat.name}
@@ -21,55 +12,32 @@ import { boat } from '../../data/content';
     </div>
   </div>
 
-
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+      <path
+        d="M0 22 C 60 10, 120 32, 180 20 S 300 8, 360 22 S 480 34, 540 20 S 660 8, 720 22 S 840 32, 900 18 S 1020 10, 1080 24 S 1200 32, 1260 18 S 1380 10, 1440 22"
+        fill="none"
+        stroke="#16211d"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+    </svg>
+  </div>
 </section>
-
 
 <style>
   .hero {
-    height: 50vh;
-    min-height: 320px;
+    min-height: 46vh;
     position: relative;
     display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    background: var(--color-sea);
+    flex-direction: column;
+    justify-content: flex-end;
+    background: var(--color-light);
     padding: 0;
   }
 
-  .ocean {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(178deg, #16211d 0%, #1c3a34 38%, #2d5c4f 62%, #6f6a3f 84%, #cf8f4a 98%);
-  }
-
-  .waves {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 80px;
-    overflow: hidden;
-  }
-
-  .wave {
-    position: absolute;
-    bottom: 0;
-    width: 200%;
-    height: 100%;
-  }
-
-  .wave svg { width: 100%; height: 100%; }
-
-  .wave-1 { animation: wave 8s linear infinite; opacity: 0.8; }
-
-  @keyframes wave {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
   .content {
-    position: relative;
-    z-index: 10;
-    padding: 2.5rem var(--section-x);
+    padding: 7rem var(--section-x) 2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -77,20 +45,19 @@ import { boat } from '../../data/content';
   }
 
   h1.title {
-    font-family: var(--font-serif);
-    font-size: clamp(3rem, 7vw, 6rem);
-    color: white;
-    line-height: 0.98;
+    font-family: var(--font-hand);
+    font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+    color: var(--color-ink);
+    line-height: 1.05;
     font-weight: 400;
   }
 
   h1.title em {
     font-style: normal;
-    color: white;
     display: block;
-    font-size: 0.45em;
-    margin-bottom: 0.3em;
-    letter-spacing: 0.05em;
+    font-size: 0.4em;
+    margin-bottom: 0.2em;
+    color: var(--color-text-subtle);
   }
 
   .subtitle {
@@ -98,19 +65,33 @@ import { boat } from '../../data/content';
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 200px;
+    color: var(--color-text-subtle);
+    max-width: 220px;
     text-align: right;
     line-height: 1.8;
   }
 
+  .wave {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1.5rem;
+  }
+
+  .wave svg {
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: 768px) {
+    .hero { min-height: 40vh; }
+
     .content {
-      padding: 2rem 1.5rem;
+      padding: 6rem 1.5rem 1.5rem;
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
     }
+
     .subtitle { text-align: left; max-width: none; }
   }
 </style>

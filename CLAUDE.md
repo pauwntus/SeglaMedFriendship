@@ -16,7 +16,7 @@ Deploy happens automatically on push to `main` via GitHub Actions (`.github/work
 
 **Single content source:** All site text lives in `src/data/content.ts` as named TypeScript exports — one per section. This is the only file that needs editing for copy changes.
 
-**Design tokens:** All colors, fonts, and spacing are CSS custom properties in `src/styles/tokens.css`. Two fonts only: `--font-serif` (Young Serif, for headings) and `--font-sans` (Schibsted Grotesk, for everything else); both are self-hosted woff2 files in `src/assets/fonts/`, declared via `@font-face` in `tokens.css`. Never add `font-family` declarations in components — use the tokens.
+**Design tokens:** All colors, fonts, and spacing are CSS custom properties in `src/styles/tokens.css`. Two fonts only: `--font-hand` (Permanent Marker, for headings and logbook-style labels) and `--font-sans` (Schibsted Grotesk, for body text); both are self-hosted woff2 files in `src/assets/fonts/`, declared via `@font-face` in `tokens.css`. Never add `font-family` declarations in components — use the tokens.
 
 **Section order:** Controlled entirely by `src/pages/index.astro`. Reorder the component imports there to reorder sections on the page.
 

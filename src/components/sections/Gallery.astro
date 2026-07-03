@@ -58,17 +58,9 @@ const imageFor = (src?: string) =>
 </section>
 
 <style>
-  section {
-    background: var(--color-ink);
-  }
-
-  /* Dark section overrides */
-  .section-label { color: color-mix(in srgb, var(--color-sun) 80%, transparent); }
-  .section-title { color: white; }
-
   .intro {
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-subtle);
     font-weight: 300;
     margin-bottom: 3rem;
     max-width: 500px;
@@ -78,22 +70,26 @@ const imageFor = (src?: string) =>
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
-    gap: 0.5rem;
+    gap: 1.6rem 1.3rem;
   }
 
+  /* Inklistrade foton, som i loggboken */
   .item {
-    background: var(--color-sea);
-    border-radius: 2px;
-    overflow: hidden;
+    background: #fffdf6;
+    border: 9px solid #fffdf6;
     aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    transition: transform 0.3s;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(22, 33, 29, 0.22), 0 5px 14px rgba(22, 33, 29, 0.1);
+    transition: transform 0.3s ease;
   }
 
-  .item:hover { transform: scale(0.98); }
+  .item:nth-child(4n + 1) { transform: rotate(-1.1deg); }
+  .item:nth-child(4n + 2) { transform: rotate(0.9deg); }
+  .item:nth-child(4n + 3) { transform: rotate(-0.5deg); }
+  .item:nth-child(4n)     { transform: rotate(1.2deg); }
+
+  .item:hover { transform: rotate(0deg); }
 
   .item--featured {
     grid-column: span 2;
@@ -120,14 +116,12 @@ const imageFor = (src?: string) =>
     padding: 2rem;
   }
 
-  .placeholder svg { opacity: 0.4; }
+  .placeholder svg { opacity: 0.3; stroke: var(--color-ink); }
 
   .placeholder-label {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-hand);
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
     text-align: center;
     white-space: pre-line;
   }

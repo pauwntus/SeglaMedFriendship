@@ -48,8 +48,8 @@ export const about = {
 
 export const gallery = {
   label: '02 – Bilder',
-  title: 'Äventyr<br><em>ombord</em>',
-  intro: 'Svindersvik, Härsö, Björnö, Arholma – och platser vi inte hittade på kartan men minns för alltid.',
+  title: 'Eskapader<br><em>och bravader</em>',
+  intro: 'Ur loggboken: Svindersvik, Härsö, Björnö, Arholma – och platser vi inte hittade på kartan men minns för alltid.',
   // Lägg bildfiler i src/assets/bilder/ och skriv filnamnet i src-fältet.
   // Labeln blir alt-text. featured: true ger en stor 2×2-ruta i rutnätet.
   // Tom src visar en platshållare med labeln.
