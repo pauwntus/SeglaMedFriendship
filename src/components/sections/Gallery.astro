@@ -61,7 +61,7 @@ const imageFor = (src?: string) =>
   .intro {
     font-size: 1.05rem;
     color: var(--color-text-subtle);
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 3rem;
     max-width: 500px;
   }
@@ -128,7 +128,14 @@ const imageFor = (src?: string) =>
 
   @media (max-width: 768px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
-    .item--featured { grid-column: span 2; }
+
+    /* På två kolumner har den stora rutan inga grannar som ger radhöjd,
+       så utan egen aspect-ratio blir den avlång och platt */
+    .item--featured {
+      grid-column: span 2;
+      grid-row: span 1;
+      aspect-ratio: 4 / 3;
+    }
   }
 
 </style>
