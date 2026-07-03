@@ -30,7 +30,7 @@ export const about = {
   label: '01 – Om båten',
   title: 'Välkommen<br><em>ombord</em>',
   paragraphs: [
-    'Friendship är en Albin Viggen. Stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når vi Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
+    'Friendship är en Albin Viggen. Stabil, lättseglad och precis lagom stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når vi Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
     'Varje sommar, efter en lång höst och vinter, är det äntligen dags igen. Man ställer iordning, packar mat och sätter kurs mot Härsö, Björnö, Skratten eller vart det nu bär.',
     'Det händer saker ombord, det hör till, och det är minst lika mycket det man minns efteråt. Solnedgången i Verkarna, bastun på Härsö, att räkna stjärnfall från Domkyrkan en nattsvart augustikväll.',
   ],
