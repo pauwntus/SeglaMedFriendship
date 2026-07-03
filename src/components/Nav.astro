@@ -1,9 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import { boat, navLinks } from '../data/content';
+import logo from '../assets/friendship-logo.png';
 ---
 
 <nav id="main-nav">
-  <a href="#" class="brand">{boat.name}</a>
+  <a href="#" class="brand" aria-label={boat.name}>
+    <Image src={logo} alt={boat.name} width="172" densities={[1, 2]} loading="eager" class="brand-logo" />
+  </a>
   <button id="nav-toggle" class="toggle" aria-label="Meny" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -54,15 +58,19 @@ import { boat, navLinks } from '../data/content';
   }
 
   .brand {
-    font-family: var(--font-hand);
-    font-size: 1.35rem;
-    color: var(--color-ink);
-    letter-spacing: 0.08em;
-    text-decoration: none;
-    transition: color 0.3s;
+    display: block;
+    line-height: 0;
   }
 
-  nav.scrolled .brand { color: white; }
+  .brand-logo {
+    height: 52px;
+    width: auto;
+    transition: filter 0.3s;
+  }
+
+  nav.scrolled .brand-logo {
+    filter: brightness(0) invert(1);
+  }
 
   .links {
     display: flex;
@@ -111,7 +119,9 @@ import { boat, navLinks } from '../data/content';
   .toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
+    nav { padding: 0.85rem 1.5rem; }
+
+    .brand-logo { height: 44px; }
 
     .toggle { display: flex; }
 
