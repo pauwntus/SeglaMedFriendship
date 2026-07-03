@@ -27,11 +27,11 @@ from shapely.geometry import box, LineString, MultiLineString
 from shapely.ops import unary_union, linemerge
 
 REL = 'release/2026-06-17.0'
-FETCH_BBOX = (18.085, 59.298, 18.150, 59.322)   # lon0, lat0, lon1, lat1
-SCENE = (18.1040, 59.3035, 18.1380, 59.3180)
+FETCH_BBOX = (18.085, 59.298, 18.162, 59.322)   # lon0, lat0, lon1, lat1
+SCENE = (18.1040, 59.3035, 18.1560, 59.3185)
 SICKLA = (18.12145, 59.30671)   # tvärbanans ändpunkt
-CLUB   = (18.11841, 59.31040)   # Henriksdalsbacken vid vikens spets
-BUS    = (18.11099, 59.31112)   # Henriksdalsringen närmast trappan
+CLUB   = (18.12177, 59.31070)   # klubbens brygga på vikens norra strand
+BUS    = (18.10850, 59.31130)   # bussens vändplan vid ICA, Henriksdalsberget
 WALK = {'footway','path','steps','cycleway','pedestrian','residential',
         'living_street','service','unclassified','tertiary','secondary'}
 COS = math.cos(math.radians(59.31))
