@@ -3,24 +3,42 @@
    Edit this file to change the entire look of the site.
    ═══════════════════════════════════════════════════════ */
 
+/* Self-hostade typsnitt — inga externa beroenden, funkar på svajig
+   skärgårdsuppkoppling. Schibsted Grotesk är en variabel fil (400–600). */
+@font-face {
+  font-family: 'Young Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/young-serif-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../assets/fonts/schibsted-grotesk.woff2') format('woff2');
+}
+
 :root {
   /* Colors */
-  --color-ink:     #1a1f2e;   /* dark navy  — body text, dark bg */
-  --color-sea:     #1e3a5f;   /* deep navy  — headings, dark sections */
-  --color-horizon: #4a7fa5;   /* mid blue   — dekor, stora ytor */
-  --color-horizon-text: #33607f; /* mörk mid blue — små etiketter på ljus bg (AA) */
-  --color-foam:    #f0ede6;   /* warm cream — alternate section bg */
-  --color-salt:    #d9d4c9;   /* light gray — borders, dividers */
+  --color-ink:     #16211d;   /* barrskogsnatt — mörk bg, footer */
+  --color-sea:     #1c3a34;   /* kvällsvatten/gran — rubriker, mörka ytor */
+  --color-horizon: #4d7a6e;   /* sjögrön dis — dekor, stora ytor */
+  --color-horizon-text: #2f5f55; /* mörk sjögrön — små etiketter på ljus bg (AA) */
+  --color-foam:    #eee7d6;   /* solblekt papper — kortytor */
+  --color-salt:    #d6cfbc;   /* torkat sjögräs — linjer, avdelare */
   --color-sun:     #d4813b;   /* flytvästbärnsten — dekor, nummer på ljus bg */
   --color-sun-deep:#8a5f24;   /* mörk bärnsten — text i accentfärg på ljus bg (AA) */
   --color-sun-soft:#e0b578;   /* ljus bärnsten — accent på mörk bg (AA) */
-  --color-light:   #f8f5ef;   /* near white — default page bg */
-  --color-text-body:      #3d3a35;   /* warm body text on light bg */
-  --color-text-subtle:    #5a5650;   /* secondary text on light bg */
+  --color-light:   #f7f2e6;   /* varmt solblekt — sidbakgrund */
+  --color-text-body:      #3b3a32;   /* varm brödtext på ljus bg */
+  --color-text-subtle:    #585448;   /* sekundär text på ljus bg */
 
   /* Typography — two fonts only */
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans:  system-ui, sans-serif;
+  --font-serif: 'Young Serif', Georgia, serif;
+  --font-sans:  'Schibsted Grotesk', system-ui, sans-serif;
 
   /* Layout */
   --section-y:  7rem;
