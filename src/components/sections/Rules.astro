@@ -21,7 +21,7 @@ import { rules } from '../../data/content';
       <div class="emergency-body">
         Vid nödläge: <a class="emergency-phone" href={rules.emergency.phoneHref}>{rules.emergency.phone}</a>
         <span class="emergency-hint">({rules.emergency.phoneNote})</span> &nbsp;·&nbsp;
-        {rules.emergency.vhf} &nbsp;·&nbsp; Nödrop: <strong>{rules.emergency.mayday}</strong>
+        Nödrop: <strong>{rules.emergency.mayday}</strong>
       </div>
       <div class="emergency-body">
         {rules.emergency.ssrsLabel}: <a class="emergency-phone" href={rules.emergency.ssrsHref}>{rules.emergency.ssrsPhone}</a>
@@ -63,7 +63,7 @@ import { rules } from '../../data/content';
     font-size: 0.88rem;
     color: var(--color-text-body);
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   .emergency {
@@ -84,7 +84,7 @@ import { rules } from '../../data/content';
     color: rgba(255, 255, 255, 0.92);
     font-size: 1rem;
     line-height: 1.9;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   .emergency-body strong { color: white; font-weight: 600; }
@@ -104,7 +104,7 @@ import { rules } from '../../data/content';
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.9rem;
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   @media (max-width: 768px) {

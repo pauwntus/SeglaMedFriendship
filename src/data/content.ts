@@ -28,11 +28,11 @@ export const navLinks = [
 
 export const about = {
   label: '01 – Om båten',
-  title: 'En klassiker<br>på <em>Stockholms vatten</em>',
+  title: 'Välkommen<br><em>ombord</em>',
   paragraphs: [
-    'Friendship är en Albin Viggen – stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når du Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
-    'Varje sommar, efter en lång höst och vinter, är det äntligen dags igen. Man ställer iordning, packar mat och sätter kurs mot Härsö, Björnö eller vart det bär.',
-    'Det händer saker ombord – det hör till. Men det är inte det man minns efteråt. Man minns solnedgången i Norrviken, bastun på Härsö, att räkna stjärnfall på rygg på däck en nattsvart augustikväll.',
+    'Friendship är en Albin Viggen. Stabil, lättseglad och precis rätt stor för tre till fyra vänner. Hon ligger vid Svindersviks Båtklubb i Nacka, och härifrån når vi Baggensfjärden och skärgårdens naturhamnar på ungefär en timme.',
+    'Varje sommar, efter en lång höst och vinter, är det äntligen dags igen. Man ställer iordning, packar mat och sätter kurs mot Härsö, Björnö, Skratten eller vart det nu bär.',
+    'Det händer saker ombord, det hör till, och det är minst lika mycket det man minns efteråt. Solnedgången i Verkarna, bastun på Härsö, att räkna stjärnfall från Domkyrkan en nattsvart augustikväll.',
   ],
   specs: [
     { label: 'Typ',        value: 'Albin Viggen' },
@@ -49,7 +49,7 @@ export const about = {
 export const gallery = {
   label: '02 – Bilder',
   title: 'Eskapader<br><em>och bravader</em>',
-  intro: 'Ur loggboken: Svindersvik, Härsö, Björnö, Arholma – och platser vi inte hittade på kartan men minns för alltid.',
+  intro: 'Ur loggboken: Svindersvik, Härsö, Björnö, Arholma och platser vi inte hittade på kartan men minns för alltid.',
   // Lägg bildfiler i src/assets/bilder/ och skriv filnamnet i src-fältet.
   // Labeln blir alt-text. featured: true ger en stor 2×2-ruta i rutnätet.
   // Tom src visar en platshållare med labeln.
@@ -82,11 +82,11 @@ export const gallery = {
 export const packing = {
   label: '03 – Packlista',
   title: 'Vad tar du<br><em>med dig?</em>',
-  tip:   'Packa i mjuka väskor – de ryms i stuvutrymmena, hårda resväskor passar inte ombord. Allt på däck behöver tåla att bli vått.',
+  tip:   'Packa i mjuka väskor, de ryms i stuvutrymmena. Hårda resväskor passar inte ombord. Packa så att du enkelt kan packa ihop dina grejer under dagen, och allt på däck behöver tåla att bli vått.',
   cards: [
     {
-      icon:   'clothes',
-      title:  'Kläder & skydd',
+      icon:   'bag',
+      title:  'Packlista',
       snacks: false,
       items: [
         { text: 'Regnkläder' },
@@ -97,13 +97,6 @@ export const packing = {
         { text: 'Tofflor / sandaler' },
         { text: 'Halkfria skor' },
         { text: 'Solskyddsfaktor' },
-      ],
-    },
-    {
-      icon:   'bag',
-      title:  'Personligt',
-      snacks: false,
-      items: [
         { text: 'Sovsäck eller sängkläder + filt' },
         { text: 'Handduk' },
         { text: 'Pannlampa' },
@@ -121,11 +114,11 @@ export const packing = {
         { text: 'Alla tar med varsitt snacks att dela' },
         { text: 'Något oväntat' },
         { text: 'Avslöjas ombord' },
+        { text: 'En frivillig tradition' },
       ],
       tradition: {
-        label:  'Tidigare år',
-        value:  'Svampte · Lakritspipor',
-        footer: 'En frivillig tradition ombord.',
+        label:  'Oväntade snacks vi minns',
+        value:  'Svampte · Lakritspipor · Snickersglass',
       },
     },
   ],
@@ -134,23 +127,24 @@ export const packing = {
 export const prep = {
   label: '04 – Att tänka på',
   title: 'Inför<br><em>avfärd</em>',
-  intro: 'Det här gör vi tillsammans innan vi lägger ut. Kapten visar och alla hjälps åt, ingen förväntas kunna något i förväg.',
+  intro: 'Det här gör vi tillsammans innan vi kastar loss. Kapten visar och alla hjälps åt, ingen förväntas kunna något i förväg.',
   checklists: [
     {
       title: 'Vi ställer i ordning',
       items: [
-        'Fyll på vatten',
-        'Fyll bensindunkarna',
+        'Fyll på vatten i dunkar',
+        'Fyll på vattentanken',
         'Fyll bensintanken',
         'Fyll på spritköket',
         'Sätt i bensinslangen (snurran)',
-        'Förbered försegel – kolla att tamparna sitter rätt',
-        'Ta fram sjökort',
+        'Förbered försegel och kolla att tamparna sitter rätt',
         'Kolla ankare och linor',
         'Kolla batteri',
         'Städa ur kölsvinet',
         'Röj upp på hyllorna',
         'Ta onödiga saker till segelvinden',
+        'Stuva in mat och dryck',
+        'Sist tar vi fram flytvästar och sjökort',
       ],
     },
     {
@@ -158,7 +152,7 @@ export const prep = {
       items: [
         'Snurran (motorn) – hur den startas och stoppas',
         'Bommen – var den är och hur den rör sig utan förvarning',
-        'Skota – hur man hanterar den',
+        'Skot – hur man hanterar det',
         'För- och storsegel – skillnad och funktion',
         'Kryssa och slå',
         'Gippa – vad det innebär och varför det ska ropas',
@@ -176,20 +170,19 @@ export const rules = {
   title: 'Att tänka på<br><em>som besättning</em>',
   items: [
     { num: '01', title: 'Flytväst alltid',    desc: 'Alla ombord bär flytväst, oavsett väder.' },
-    { num: '02', title: 'Akta bommen',        desc: 'Hänger i ögonhöjd och rör sig snabbt utan förvarning. Ropar någon "gipp" – ducka omedelbart, fråga sen.' },
-    { num: '03', title: 'Håll i dig',         desc: 'En hand för dig, en för båten. Däcket gungar och är halt. Spring aldrig – det slutar alltid dåligt.' },
+    { num: '02', title: 'Akta bommen',        desc: 'Hänger i ögonhöjd och rör sig snabbt utan förvarning. Ropar någon "gipp", ducka omedelbart och fråga sen.' },
+    { num: '03', title: 'Håll i dig',         desc: 'En hand för dig, en för båten. Däcket gungar och är halt. Spring aldrig, det slutar alltid dåligt.' },
     { num: '04', title: 'Kapten bestämmer', desc: 'Demokrati är fint till lands. Ombord gäller kaptenens ord, och det finns alltid en anledning.' },
     { num: '05', title: 'Sjösjuka',           desc: 'Frisk luft och blicken mot horisonten hjälper mer än att krypa ihop i kajutan.' },
-    { num: '06', title: 'Sopor',              desc: 'Inget skräp i havet. Allt tar vi tillbaka till land.' },
-    { num: '07', title: 'Alla bidrar',        desc: 'Lina, fender, kaffe, disk. Det är en liten båt och man märker direkt om någon inte drar sitt strå.' },
+    { num: '06', title: 'Sopor',              desc: 'Inget skräp i havet. Allt tas med i land. Sopor i grå påse, pant i blå påse. Enstaka matrester och kaffesump offras till Percy.' },
+    { num: '07', title: 'Alla bidrar',        desc: 'Rep, fendrar, kaffe, disk. Det är en liten båt och roligast blir det när alla hjälps åt.' },
   ],
   emergency: {
     phone:     '112',
     phoneHref: 'tel:112',
     phoneNote: 'begär sjöräddning',
-    vhf:       'VHF kanal 16 (anropa Sweden Rescue)',
     mayday:    'MAYDAY',
-    ssrsLabel: 'Sjöräddningssällskapet',
+    ssrsLabel: 'I mindre akuta lägen, kontakta Sjöräddningssällskapet',
     ssrsPhone: '077-579 00 90',
     ssrsHref:  'tel:+46775790090',
     note:      'Kapten visar vid avfärd var nödutrustning (raketer, brandsläckare, livboj) finns.',
