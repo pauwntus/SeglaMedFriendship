@@ -54,12 +54,15 @@ import { boat, navLinks } from '../data/content';
   }
 
   .brand {
-    font-family: var(--font-serif);
+    font-family: var(--font-hand);
     font-size: 1.35rem;
-    color: white;
+    color: var(--color-ink);
     letter-spacing: 0.08em;
     text-decoration: none;
+    transition: color 0.3s;
   }
+
+  nav.scrolled .brand { color: white; }
 
   .links {
     display: flex;
@@ -71,12 +74,15 @@ import { boat, navLinks } from '../data/content';
     font-size: 0.68rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-text-body);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .links a:hover { color: var(--color-sun-soft); }
+  .links a:hover { color: var(--color-sun-deep); }
+
+  nav.scrolled .links a { color: rgba(255, 255, 255, 0.9); }
+  nav.scrolled .links a:hover { color: var(--color-sun-soft); }
 
   /* Hamburger */
   .toggle {
@@ -93,10 +99,12 @@ import { boat, navLinks } from '../data/content';
     display: block;
     width: 22px;
     height: 2px;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--color-ink);
     border-radius: 1px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background 0.3s;
   }
+
+  nav.scrolled .toggle span { background: rgba(255, 255, 255, 0.9); }
 
   .toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .toggle.open span:nth-child(2) { opacity: 0; }
@@ -120,9 +128,11 @@ import { boat, navLinks } from '../data/content';
 
     .links.open { display: flex; }
 
-    .links a {
+    .links a,
+    nav .links a {
       padding: 0.85rem 1.5rem;
       font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.9);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
   }

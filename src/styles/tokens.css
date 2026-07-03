@@ -4,13 +4,14 @@
    ═══════════════════════════════════════════════════════ */
 
 /* Self-hostade typsnitt — inga externa beroenden, funkar på svajig
-   skärgårdsuppkoppling. Schibsted Grotesk är en variabel fil (400–600). */
+   skärgårdsuppkoppling. Permanent Marker är loggbokens tuschpenna;
+   Schibsted Grotesk (variabel 400–600) är den prydliga brödtexten. */
 @font-face {
-  font-family: 'Young Serif';
+  font-family: 'Permanent Marker';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../assets/fonts/young-serif-400.woff2') format('woff2');
+  src: url('../assets/fonts/permanent-marker.woff2') format('woff2');
 }
 
 @font-face {
@@ -37,7 +38,7 @@
   --color-text-subtle:    #585448;   /* sekundär text på ljus bg */
 
   /* Typography — two fonts only */
-  --font-serif: 'Young Serif', Georgia, serif;
+  --font-hand: 'Permanent Marker', 'Comic Sans MS', cursive;
   --font-sans:  'Schibsted Grotesk', system-ui, sans-serif;
 
   /* Layout */
