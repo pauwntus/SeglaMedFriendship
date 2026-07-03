@@ -31,7 +31,7 @@ FETCH_BBOX = (18.085, 59.298, 18.162, 59.322)   # lon0, lat0, lon1, lat1
 SCENE = (18.1060, 59.3048, 18.1505, 59.3175)
 SICKLA = (18.12145, 59.30671)   # tvärbanans ändpunkt
 CLUB   = (18.12177, 59.31070)   # klubbens brygga på vikens norra strand
-BUS    = (18.11120, 59.31085)   # bussens vändplan vid ICA på Henriksdalsringens västsida
+BUS    = (18.11700, 59.31095)   # ICA Nära Henriksdal, ringens östsida (ur Overture places)
 WALK = {'footway','path','steps','cycleway','pedestrian','residential',
         'living_street','service','unclassified','tertiary','secondary'}
 COS = math.cos(math.radians(59.31))
