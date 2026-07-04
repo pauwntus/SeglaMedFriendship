@@ -24,10 +24,10 @@
 
 :root {
   /* Colors */
-  --color-ink:     #16211d;   /* barrskogsnatt — mörk bg, footer */
-  --color-sea:     #1c3a34;   /* kvällsvatten/gran — rubriker, mörka ytor */
-  --color-horizon: #4d7a6e;   /* sjögrön dis — dekor, stora ytor */
-  --color-horizon-text: #2f5f55; /* mörk sjögrön — små etiketter på ljus bg (AA) */
+  --color-ink:     #16183a;   /* mörkblå natt — mörk bg, footer */
+  --color-sea:     #232a70;   /* loggans marinblå — rubriker, mörka ytor */
+  --color-horizon: #5a63b5;   /* blå dis — dekor, stora ytor */
+  --color-horizon-text: #3a4192; /* mörk loggblå — små etiketter på ljus bg (AA) */
   --color-foam:    #eee7d6;   /* solblekt papper — kortytor */
   --color-salt:    #d6cfbc;   /* torkat sjögräs — linjer, avdelare */
   --color-sun:     #d4813b;   /* flytvästbärnsten — dekor, nummer på ljus bg */
